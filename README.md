@@ -1,6 +1,6 @@
-# provider
+# provider state management
 
-A new Flutter project.
+provider works with stateless widget.
 
 ## Getting Started
 
