@@ -7,10 +7,13 @@ class CstmResultTxt extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final providerData = Provider.of<NumberIncrmntController>(context);
-    return Text(
-      providerData.nmbr.toString(),
-      textScaleFactor: 5,
+    // final providerData = Provider.of<NumberIncrmntController>(context);
+
+    return Consumer<NumberIncrmntController>(
+      builder: (_, providerData,__)=>Text(
+        providerData.nmbr.toString(),
+        textScaleFactor: 5,
+      ),
     );
   }
 }

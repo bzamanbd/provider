@@ -7,8 +7,8 @@ import 'views/home_scrn.dart';
 import 'views/scnd_scrn.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: ((context) => NumberIncrmntController()),
+  runApp(ChangeNotifierProvider<NumberIncrmntController>(
+      create:(_)=>NumberIncrmntController(),
       child: MyApp()));
 }
 
@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
           textTheme: Themes.txtTheme
         ),
         routes: {
-          '/': (context) => HomeScreen(title: _title),
-          '/scondpage':(context) => ScndScreen(title:_title),
+          '/': (_) => HomeScreen(title: _title),
+          '/scondpage':(_) => ScndScreen(title:_title),
         }
     );
   }

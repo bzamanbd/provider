@@ -7,11 +7,11 @@ class CstmIncrmntBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final providerData = Provider.of<NumberIncrmntController>(context);
-    return ElevatedButton(
-        onPressed: () {
-          providerData.incrmnt();
-        },
-        child: const Text('Incmnt'));
+    // final providerData = Provider.of<NumberIncrmntController>(context);
+    return Consumer<NumberIncrmntController>(
+      builder: (_, providerData,__)=>ElevatedButton(
+          onPressed: ()=>providerData.incrmnt(),
+          child: const Text('Incmnt')),
+    );
   }
 }

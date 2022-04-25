@@ -6,7 +6,7 @@ class NextBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: (() => Navigator.pushNamed(context, '/scondpage')),
+      onPressed:()=> Navigator.pushNamed(context, '/scondpage'),
       child: const Text('NEXT PAGE'),
     );
   }
